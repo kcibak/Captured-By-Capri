@@ -110,11 +110,12 @@ const SubNavLink = styled.a`
 `;
 
 const workSections = [
-  { id: 'wedding', label: 'Wedding' },
-  { id: 'graduation', label: 'Graduation' },
   { id: 'film', label: '35mm Film' },
   { id: 'beach', label: 'Beach' },
+  { id: 'graduation', label: 'Graduation' },
+  { id: 'sports', label: 'Sports' },
   { id: 'studio', label: 'Studio' },
+  { id: 'wedding', label: 'Wedding' },
 ];
 
 export const SidebarNav = () => {
