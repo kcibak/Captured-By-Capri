@@ -1,4 +1,8 @@
 import React from 'react';
+import Gallery from '../components/gallery';
+import { filmImages, graduationImages, weddingImages } from '../components/galleryImages';
+import StickySectionNav from '../components/stickysectionnav';
+import '../styles/workSections.css';
 
 const sectionStyle: React.CSSProperties = {
   margin: '4rem 0',
@@ -8,32 +12,30 @@ const sectionStyle: React.CSSProperties = {
 
 const Work: React.FC = () => (
   <div>
-    <h1 style={{ fontFamily: 'Belgiano Serif, serif', fontSize: '2.2rem', marginBottom: '2rem', textAlign: 'center' }}>
+    <h1 style={{ fontFamily: 'Belgiano Serif, serif', fontSize: '2.2rem', marginBottom: '2rem', textAlign: 'center', marginTop: '6.5rem' }}>
       Photography Work
     </h1>
-    <section id="film" style={sectionStyle}>
-      <h2>35mm Film</h2>
-      {/* 35mm Film gallery or content here */}
+    <StickySectionNav />
+    <section id="film" className="work-section" style={sectionStyle}>
+      <Gallery title="35mm Film" images={filmImages} />
     </section>
-    <section id="beach" style={sectionStyle}>
-      <h2>Beach</h2>
+    <section id="beach" className="work-section alt" style={sectionStyle}>
+      <h2 className="gallery-section-title">Beach</h2>
       {/* Beach gallery or content here */}
     </section>
-    <section id="graduation" style={sectionStyle}>
-      <h2>Graduation</h2>
-      {/* Graduation gallery or content here */}
+    <section id="graduation" className="work-section" style={sectionStyle}>
+      <Gallery title="Graduation" images={graduationImages} />
     </section>
-    <section id="sports" style={sectionStyle}>
-      <h2>Sports</h2>
+    <section id="sports" className="work-section alt" style={sectionStyle}>
+      <h2 className="gallery-section-title">Sports</h2>
       {/* Sports gallery or content here */}
     </section>
-    <section id="studio" style={sectionStyle}>
-      <h2>Studio</h2>
+    <section id="studio" className="work-section" style={sectionStyle}>
+      <h2 className="gallery-section-title">Studio</h2>
       {/* Studio gallery or content here */}
     </section>
-    <section id="wedding" style={sectionStyle}>
-      <h2>Wedding</h2>
-      {/* Wedding gallery or content here */}
+    <section id="wedding" className="work-section alt" style={sectionStyle}>
+      <Gallery title="Wedding" images={weddingImages} />
     </section>
   </div>
 );

@@ -1,0 +1,8 @@
+/* Alternating section backgrounds for the Work page */
+.work-section {
+  background: #fff7f3;
+  transition: background 0.3s;
+}
+.work-section.alt {
+  background: #f8d7d0;
+}

@@ -1,14 +1,13 @@
-import React from 'react';
 import { MainLayout } from '../components/mainlayout';
+import { filmImages } from '../components/galleryImages';
+import Slideshow from '../components/slideshow';
+
+const allSlideshowImages = filmImages.map(img => ({ full: img.full, alt: img.full.split('/').pop() }));
 
 const Home = () => (
   <MainLayout>
-    <h1 style={{ textAlign: 'center', fontFamily: 'Belgiano Serif, serif', fontSize: '2.5rem', margin: '3rem 0 2rem' }}>
-      Hi, I’m Capri Procopio!
-    </h1>
-    <div style={{ width: '100%', maxWidth: 900, margin: '0 auto', height: 400, background: '#F8D7D0', borderRadius: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, color: '#3A4D44', boxShadow: '0 4px 24px rgba(60,60,60,0.08)' }}>
-      {/* Slideshow placeholder */}
-      Slideshow goes here
+    <div style={{ width: '100vw', maxWidth: 1600, height: '65vh', margin: '1rem auto 0 auto', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', background: 'none', boxShadow: 'none', borderRadius: 0, padding: 0 }}>
+      <Slideshow images={allSlideshowImages} interval={4000} />
     </div>
   </MainLayout>
 );

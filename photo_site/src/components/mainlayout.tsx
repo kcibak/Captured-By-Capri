@@ -1,10 +1,10 @@
 import React, { type ReactNode } from 'react';
-import { SidebarNav } from './sidebarnav';
+import { TopNavbar } from './topnavbar';
 
 export const MainLayout = ({ children }: { children: ReactNode }) => (
-  <div style={{ display: 'flex' }}>
-    <SidebarNav />
-    <main style={{ flex: 1, marginLeft: 64, padding: '2rem', minHeight: '100vh', transition: 'margin-left 0.3s cubic-bezier(0.4,0,0.2,1)' }}>
+  <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <TopNavbar />
+    <main style={{ flex: 1, marginTop: 80, padding: '0', minHeight: '100vh' }}>
       {children}
     </main>
   </div>

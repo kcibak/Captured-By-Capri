@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: none;
+  z-index: 2000;
+  transition: height 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  transition: justify-content 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.top-navbar .logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  color: #E07A5F;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: font-size 0.3s, margin 0.5s cubic-bezier(0.4,0,0.2,1), left 0.5s cubic-bezier(0.4,0,0.2,1), transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  left: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links a {
+  font-family: 'Belgiano Serif', serif;
+  font-size: 1.2rem;
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: #F8D7D0;
+  color: #E07A5F;
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.08);
+  border-radius: 8px;
+  min-width: 180px;
+  padding: 0.5rem 0;
+  z-index: 10;
+}
+
+.nav-links > li:hover .subnav,
+.nav-links > li:focus-within .subnav {
+  display: block;
+}
+
+.subnav li a {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  color: #222;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.subnav li a.active,
+.subnav li a:hover {
+  background: #F8D7D0;
+  color: #E07A5F;
+  font-weight: 700;
+}
+
+.top-navbar.shrink {
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.04);
+}
+
+.top-navbar.shrink .logo {
+  font-size: 1.4rem;
+}
+
+.navbar-content.center-logo {
+  justify-content: center;
+  transition: justify-content 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.navbar-content.center-logo .logo {
+  margin: 0 auto;
+  left: 0;
+  transform: translateX(0);
+}
+
+.navbar-content.center-logo .nav-links {
+  display: none;
+}
