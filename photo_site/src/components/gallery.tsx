@@ -108,7 +108,7 @@ const Gallery: React.FC<GalleryProps> = ({ title, images }) => {
         {images.map((img, idx) => (
           <div className="gallery-img-box" key={idx} onClick={() => openModal(idx)}>
             <img
-              src={`/${img.thumb}`}
+              src={img.thumb}
               alt={title + ' ' + (idx + 1)}
               loading="lazy"
               draggable="false"
@@ -149,7 +149,7 @@ const Gallery: React.FC<GalleryProps> = ({ title, images }) => {
               onClick={e => e.stopPropagation()}
             >
               <img
-                src={`/${images[currentIdx].full}`}
+                src={images[currentIdx].full}
                 alt={title + ' enlarged'}
                 style={{ transform: `scale(${zoom})`, transition: 'transform 0.2s', userSelect: 'none' }}
                 draggable="false"

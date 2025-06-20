@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { ThemeProvider as StyledThemeProvider, createGlobalStyle } from 'styled-components';
 
 const theme = {

@@ -1,4 +1,4 @@
-import React, { type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { TopNavbar } from './topnavbar';
 
 export const MainLayout = ({ children }: { children: ReactNode }) => (
