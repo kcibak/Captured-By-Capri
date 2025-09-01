@@ -115,6 +115,12 @@ const Gallery: React.FC<GalleryProps> = ({ title, images }) => {
               style={{ userSelect: 'none' }}
               onContextMenu={e => e.preventDefault()}
               className="no-user-drag"
+              onError={(e) => {
+                // Fallback to full image if thumbnail missing
+                if (e.currentTarget.src !== window.location.origin + img.full) {
+                  e.currentTarget.src = img.full;
+                }
+              }}
             />
           </div>
         ))}
