@@ -12,6 +12,7 @@ Netlify: **https://capturedbycapri.netlify.app/**
 - Styled-components with global theme + custom fonts
 - TypeScript strict setup via project + app/node `tsconfig` separation
 - Accessible form placeholder (Contact page) ready for future mail service integration
+- Disallow saving of images throughout the application
 
 ## 🧱 Tech Stack
 - React 19
@@ -20,12 +21,6 @@ Netlify: **https://capturedbycapri.netlify.app/**
 - Vite 6 (lightning-fast dev & build)
 - styled-components 6
 - ESLint 9 (flat config) + TypeScript ESLint
-
-## 🌐 Deployment (Netlify)
-1. Create a new Netlify site, connect the Git repository.
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-4. Add the deployed URL to the Demo section above.
 
 ---
 Made as a demo portfolio for Capri Procopio, is strictly for demo purposes.
